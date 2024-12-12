@@ -1,5 +1,7 @@
 import { CommonLayout } from "../layouts";
-import { Login, Register, Error404 } from "../pages/common";
+import { Login } from "../pages/common";
+import { Register } from "../pages/common";
+import { Error404 } from "../pages/common";
 
 const routesCommon = [
   {

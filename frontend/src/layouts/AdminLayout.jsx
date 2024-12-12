@@ -1,4 +1,4 @@
-import { Login } from "../pages/common";
+import { Login } from "../pages/common/Login";
 import { useAuth } from "../hook/useAuth";
 
 export function AdminLayout({ children }) {
