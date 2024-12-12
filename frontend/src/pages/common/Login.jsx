@@ -29,7 +29,7 @@ export function Login() {
   return (
     <div className="login-admin">
       <div className="login-admin__content">
-        <h1>Login</h1>
+        <h1>Login Brayan</h1>
 
         <Form className="login-form-admin" onSubmit={formik.handleSubmit}>
           <label>Correo electrónico</label>
