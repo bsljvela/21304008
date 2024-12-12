@@ -1,5 +1,5 @@
 import { ClientLayout } from "../layouts";
-import {Home} from '../pages/client/Home'
+import {Home} from "../pages/client/Home";
 
 const routesClient = [
   {
