@@ -39,7 +39,7 @@ jobs:
 
       # 5. Instalar dependencias de Django
       - name: Install Django dependencies
-        working-directory: backend
+        working-directory: BackEnd
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
@@ -47,7 +47,7 @@ jobs:
 
       # 6. Recolectar archivos estáticos de Django
       - name: Collect static files
-        working-directory: backend
+        working-directory: BackEnd
         run: |
           python manage.py collectstatic --noinput
 
@@ -66,7 +66,7 @@ jobs:
         run: |
           # Copiar archivos generados de React y Django directamente a la rama deploy
           cp -R frontend/dist/* ./  # Copiar archivos estáticos de React al root de la rama deploy
-          cp -R backend/* ./  # Copiar archivos de Django al root de la rama deploy
+          cp -R BackEnd/* ./  # Copiar archivos de Django al root de la rama deploy
 
 
       # 9. Crear el archivo .htaccess
@@ -85,6 +85,6 @@ jobs:
       # 10. Subir los cambios a la rama `deploy`
       - name: Commit and push to deploy branch
         run: |
-          git add assets/* backend/* .htaccess index.html
+          git add assets/* BackEnd/* .htaccess index.html
           git commit -m "Deploy build $(date)"
           git push --force origin deploy
